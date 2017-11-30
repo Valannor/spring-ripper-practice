@@ -1,4 +1,6 @@
 package quoters;
 
-public class Quoter {
+public interface Quoter {
+
+    void sayQuoter();
 }
