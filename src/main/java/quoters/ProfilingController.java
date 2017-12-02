@@ -2,13 +2,13 @@ package quoters;
 
 public class ProfilingController implements ProfilingControllerMBean{
 
-    private boolean enabled;
+    private boolean enabled = true;
 
     public boolean isEnabled() {
         return enabled;
     }
 
-    public void setEnabler(boolean enabler) {
-        this.enabled = enabler;
+    public void setEnabler(boolean enabled) {
+        this.enabled = enabled;
     }
 }
