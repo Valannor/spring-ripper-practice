@@ -8,6 +8,7 @@ import java.awt.*;
 import java.util.Random;
 
 @org.springframework.stereotype.Component
+@Scope("prototype")
 public class ColorFrame extends JFrame {
 
     @Autowired
