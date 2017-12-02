@@ -6,6 +6,8 @@ import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 
 public class DeprecationHandlerBeanFactoryPostProcessor implements BeanFactoryPostProcessor{
+
+    //Use it, if you want to be fired
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
         String[] names = beanFactory.getBeanDefinitionNames();
