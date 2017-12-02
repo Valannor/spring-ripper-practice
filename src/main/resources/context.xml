@@ -9,6 +9,7 @@
     <!--by this-->
     <context:annotation-config/>
 
+    <bean class="quoters.PostProxyInvokerContextListener"/>
     <bean class="quoters.ProfilingHandlerBeanPostProcessor"/>
     <bean class="quoters.InjectRandomIntAnnotationBeanPostProcessor"/>
 

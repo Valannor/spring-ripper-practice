@@ -13,7 +13,7 @@ public class TerminatorQuoter implements Quoter {
     @PostConstruct
     public void init() {
 
-        System.out.println("Phase 2"); //Then, Spring tune it
+        System.out.println("Phase 2"); //Then, Spring tunes it
         System.out.println(repeat);
     }
 
@@ -26,8 +26,11 @@ public class TerminatorQuoter implements Quoter {
         this.message = message;
     }
 
-    @PostConstruct
+    @PostProxy
     public void sayQuote() {
+
+        System.out.println("Phase 3"); //After object created and tuned. Only context listener works later
+
         for (int i = 0; i < repeat; i++)
             System.out.println("message = " + message);
     }
