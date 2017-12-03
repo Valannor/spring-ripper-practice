@@ -7,10 +7,7 @@ import java.awt.*;
 import java.util.Random;
 
 @org.springframework.stereotype.Component
-public class ColorFrame extends JFrame {
-
-    @Autowired
-    private Color color;
+public abstract class ColorFrame extends JFrame {
 
     public ColorFrame() {
 
@@ -23,7 +20,9 @@ public class ColorFrame extends JFrame {
 
         Random random = new Random();
         setLocation(random.nextInt(1200), random.nextInt(700));
-        getContentPane().setBackground(color);
+        getContentPane().setBackground(getColor());
         repaint();
     }
+
+    protected abstract Color getColor();
 }
